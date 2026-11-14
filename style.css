@@ -1,0 +1,308 @@
+/* Pengaturan dasar */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #243047;
+  background: #f5f7fb;
+  line-height: 1.7;
+}
+
+.container {
+  width: min(1100px, 90%);
+  margin: 0 auto;
+}
+
+/* Header dan navigasi: Flexbox */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e8edf5;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  min-height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.brand {
+  color: #243047;
+  font-size: 1.45rem;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+
+.brand span {
+  color: #536dfe;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+nav a {
+  color: #526078;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #536dfe;
+}
+
+/* Bagian perkenalan */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 55px;
+  padding-top: 82px;
+  padding-bottom: 82px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.eyebrow {
+  color: #536dfe;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  color: #18243a;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.15;
+  letter-spacing: -1.8px;
+  margin-bottom: 18px;
+}
+
+h1 span {
+  color: #536dfe;
+}
+
+.intro {
+  color: #657189;
+  max-width: 570px;
+  font-size: 1.08rem;
+  margin-bottom: 28px;
+}
+
+.primary-button {
+  display: inline-block;
+  background: #536dfe;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 12px 22px;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(83, 109, 254, 0.2);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.primary-button:hover {
+  background: #3f57e8;
+  transform: translateY(-2px);
+}
+
+.photo-wrap {
+  width: 290px;
+  height: 290px;
+  flex: 0 0 290px;
+  padding: 10px;
+  background: #e6eaff;
+  border-radius: 28px;
+  transform: rotate(2deg);
+}
+
+.photo-wrap img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 21px;
+  transform: rotate(-2deg);
+}
+
+/* Bagian konten */
+.section {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
+.section-heading {
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  color: #18243a;
+  font-size: 2rem;
+  letter-spacing: -0.7px;
+}
+
+.about-card,
+.contact-card {
+  background: #ffffff;
+  border: 1px solid #e9edf5;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(32, 48, 75, 0.04);
+}
+
+.about-card > p,
+.contact-card p {
+  color: #657189;
+  margin-bottom: 22px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.info-grid div {
+  background: #f5f7ff;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.info-grid span {
+  display: block;
+  color: #7a8498;
+  font-size: 0.82rem;
+  margin-bottom: 4px;
+}
+
+.info-grid strong {
+  color: #273653;
+  font-size: 0.95rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.skill-card {
+  background: #ffffff;
+  border: 1px solid #e9edf5;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(32, 48, 75, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(32, 48, 75, 0.09);
+}
+
+.skill-icon {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  background: #edf0ff;
+  color: #536dfe;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.skill-card h3 {
+  color: #243047;
+  margin-bottom: 7px;
+}
+
+.skill-card p {
+  color: #718097;
+  font-size: 0.94rem;
+}
+
+.contact-card a {
+  color: #536dfe;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+.site-footer {
+  margin-top: 45px;
+  padding: 24px 5%;
+  background: #202d46;
+  color: #dce3f1;
+  text-align: center;
+  font-size: 0.88rem;
+}
+
+/* Tampilan pada layar kecil */
+@media (max-width: 700px) {
+  .header-inner {
+    flex-direction: column;
+    justify-content: center;
+    padding: 14px 0;
+    gap: 8px;
+  }
+
+  nav {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 48px;
+    padding-bottom: 45px;
+    gap: 30px;
+  }
+
+  .photo-wrap {
+    width: 220px;
+    height: 220px;
+    flex-basis: 220px;
+  }
+
+  .intro {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .info-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
